@@ -1,8 +1,16 @@
 .idea
 .gitattributes
+
 hello-world/.settings/
 hello-world/.idea/
 hello-world/build/
 hello-world/.classpath
 hello-world/.project
 hello-world/hello-world.iml
+
+deployment/.settings/
+deployment/.idea/
+deployment/build/
+deployment/.classpath
+deployment/.project
+deployment/hello-world.iml
