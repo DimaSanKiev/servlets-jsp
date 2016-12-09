@@ -18,7 +18,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Hello</servlet-name>
-		<url-pattern>/Hello</url-pattern>
+		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
