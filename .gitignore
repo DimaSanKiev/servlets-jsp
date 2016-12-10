@@ -14,3 +14,10 @@ deployment/build/
 deployment/.classpath
 deployment/.project
 deployment/hello-world.iml
+
+scriptlets/.settings/
+scriptlets/.idea/
+scriptlets/build/
+scriptlets/.classpath
+scriptlets/.project
+scriptlets/hello-world.iml
