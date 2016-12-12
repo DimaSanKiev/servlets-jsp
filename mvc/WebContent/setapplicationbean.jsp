@@ -8,11 +8,10 @@
 </head>
 <body>
 
-	<jsp:useBean id="user" class="bean.User" scope="session"></jsp:useBean>
+	<jsp:useBean id="user3" class="bean.User" scope="application"></jsp:useBean>
 
-	Email: <%= user.getEmail() %>
-	<p />
-	Password: <%= user.getPassword() %>
+	<jsp:setProperty property="email" name="user3" value="user3@email.com" />
+	<jsp:setProperty property="password" name="user3" value="password3" />
 	
 </body>
 </html>
