@@ -21,3 +21,10 @@ scriptlets/build/
 scriptlets/.classpath
 scriptlets/.project
 scriptlets/hello-world.iml
+
+mvc/.settings/
+mvc/.idea/
+mvc/build/
+mvc/.classpath
+mvc/.project
+mvc/hello-world.iml
