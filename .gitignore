@@ -28,3 +28,10 @@ mvc/build/
 mvc/.classpath
 mvc/.project
 mvc/hello-world.iml
+
+forms/.settings/
+forms/.idea/
+forms/build/
+forms/.classpath
+forms/.project
+forms/hello-world.iml
