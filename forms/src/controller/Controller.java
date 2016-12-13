@@ -23,12 +23,18 @@ public class Controller extends HttpServlet {
 		String user = request.getParameter("user");
 		
 		out.write("<html>");
-		out.write("User is: " + user);
+		out.write("User via GET: " + user);
 		out.write("</html>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		PrintWriter out = response.getWriter();
+		
+		String user = request.getParameter("user");
+		
+		out.write("<html>");
+		out.write("User via POST: " + user);
+		out.write("</html>");
 	}
 
 }

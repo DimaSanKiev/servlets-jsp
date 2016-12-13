@@ -9,6 +9,13 @@
 <body>
 
 	<form action="/forms/Controller" method="get">
+		<label>GET:</label>
+		<input type="text" name="user" />
+		<input type="submit" value="OK" />
+	</form>
+	
+	<form action="/forms/Controller" method="post">
+		<label>POST:</label>
 		<input type="text" name="user" />
 		<input type="submit" value="OK" />
 	</form>
