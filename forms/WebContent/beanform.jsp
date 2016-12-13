@@ -9,7 +9,7 @@
 <body>
 
 	<form action="/forms/formhandler.jsp" method="post">
-		Name: <input type="text" name="user" /><br/> 
+		Email: <input type="text" name="email" /><br/> 
 		Password: <input type="text" name="password" /><br/>
 		<input type="submit" value="OK" />
 	</form>

@@ -11,7 +11,7 @@
 	<jsp:useBean id="user" class="bean.User" scope="session"></jsp:useBean>
 	<jsp:setProperty property="*" name="user" />
 	
-	User name: <%= user.getUser() %>
+	Email: <%= user.getEmail() %>
 	Password: <%= user.getPassword() %>
 
 </body>

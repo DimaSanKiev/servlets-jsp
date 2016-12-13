@@ -1,15 +1,15 @@
 package bean;
 
 public class User {
-	private String user;
+	private String email;
 	private String password;
 
-	public String getUser() {
-		return user;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
