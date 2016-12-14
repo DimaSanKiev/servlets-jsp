@@ -11,9 +11,21 @@
 	<jsp:useBean id="user1" class="bean.User" scope="session"></jsp:useBean>
 	<jsp:setProperty property="*" name="user1" />
 
+	<%
+		String action = request.getParameter("action");
+		if (action != null && action.equals("formsubmit")) {
+			if (user1.validate()) {
+				request.getRequestDispatcher("/Controller").forward(request, response);
+			}
+		}
+	%>
+
+	<h3><jsp:getProperty property="message" name="user1" /></h3>
+
 	<form action="/forms/selfvalidatingform.jsp" method="post">
-		Email: <input type="text" name="email" value="<jsp:getProperty property="email" name="user1" />" /><br/> 
-		Password: <input type="text" name="password" value="<jsp:getProperty property="password" name="user1" />" /><br/>
+		<input type="hidden" name="action" value="formsubmit" />
+		<input type="text" name="email" value="<jsp:getProperty property="email" name="user1" />" /><p/> 
+		<input type="password" name="password" value="<jsp:getProperty property="password" name="user1" />" /><p/>
 		<input type="submit" value="OK" />
 	</form>
 

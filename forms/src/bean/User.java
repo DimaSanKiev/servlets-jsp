@@ -1,11 +1,11 @@
 package bean;
 
 public class User {
-	private String email;
-	private String password;
+	private String email = "";
+	private String password = "";
 
 	// message that returned if the bean can't be validated
-	private String message = "Error validating information.";
+	private String message = "";
 
 	public User() {
 	}
@@ -37,7 +37,7 @@ public class User {
 
 	public boolean validate() {
 		
-		if (email == null || email.length() == 0) {
+		if (email.length() == 0) {
 			message = "No email address set.";
 			return false;
 		} else if (!email.matches("\\w+@\\w+\\.\\w+")) {
@@ -45,7 +45,7 @@ public class User {
 			return false;
 		}
 		
-		if (password == null || password.length() < 8) {
+		if (password.length() < 8) {
 			message = "Password must be at least 8 characters.";
 			return false;
 		} else if (password.matches("\\w*\\s+\\w*")) {
