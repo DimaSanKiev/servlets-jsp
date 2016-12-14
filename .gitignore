@@ -42,3 +42,10 @@ mvc-form/build/
 mvc-form/.classpath
 mvc-form/.project
 mvc-form/hello-world.iml
+
+session-tracking/.settings/
+session-tracking/.idea/
+session-tracking/build/
+session-tracking/.classpath
+session-tracking/.project
+session-tracking/hello-world.iml
