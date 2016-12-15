@@ -63,3 +63,10 @@ scoped-objects/build/
 scoped-objects/.classpath
 scoped-objects/.project
 scoped-objects/hello-world.iml
+
+cookies/.settings/
+cookies/.idea/
+cookies/build/
+cookies/.classpath
+cookies/.project
+cookies/hello-world.iml
