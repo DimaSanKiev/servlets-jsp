@@ -49,3 +49,10 @@ session-tracking/build/
 session-tracking/.classpath
 session-tracking/.project
 session-tracking/hello-world.iml
+
+servlet-context/.settings/
+servlet-context/.idea/
+servlet-context/build/
+servlet-context/.classpath
+servlet-context/.project
+servlet-context/hello-world.iml
