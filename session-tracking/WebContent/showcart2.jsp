@@ -12,10 +12,6 @@
 	<% Cart cart = (Cart) session.getAttribute("cart"); %>
 
 	Items in cart: <%= cart == null ? "error" : cart.getTotalItems() %>
-	
-	<a href="<%= response.encodeUrl(request.getContextPath() + "/showcart2.jsp") %>">
-		Click to go to showcart2.jsp
-	</a>
 
 </body>
 </html>
