@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ControllerServlet")
 public class ControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,9 +30,13 @@ public class ControllerServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		out.println("Hits: " + hits);
+		
+		String adminName = context.getInitParameter("adminname");
+		out.println("<p>" + adminName + "</p>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
 }
+
