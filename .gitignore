@@ -56,3 +56,10 @@ servlet-context/build/
 servlet-context/.classpath
 servlet-context/.project
 servlet-context/hello-world.iml
+
+scoped-objects/.settings/
+scoped-objects/.idea/
+scoped-objects/build/
+scoped-objects/.classpath
+scoped-objects/.project
+scoped-objects/hello-world.iml
