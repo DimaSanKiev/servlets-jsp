@@ -70,3 +70,10 @@ cookies/build/
 cookies/.classpath
 cookies/.project
 cookies/hello-world.iml
+
+databases/.settings/
+databases/.idea/
+databases/build/
+databases/.classpath
+databases/.project
+databases/hello-world.iml
