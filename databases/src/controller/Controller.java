@@ -18,6 +18,7 @@ import javax.sql.DataSource;
 
 import bean.User;
 import database.Account;
+import database.DbUtils;
 
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
@@ -35,6 +36,12 @@ public class Controller extends HttpServlet {
 			ds = (DataSource) env.lookup("jdbc/webshop");
 		} catch (NamingException e) {
 			throw new ServletException();
+		}
+
+		try {
+			DbUtils.populateDatabase();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
 		}
 	}
 

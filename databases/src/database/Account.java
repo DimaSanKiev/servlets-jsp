@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Account {
 	private Connection conn;
@@ -11,10 +12,17 @@ public class Account {
 	public Account(Connection conn) {
 		this.conn = conn;
 	}
-
+	
 	public boolean login(String email, String password) throws SQLException {
+		
+		/*String sql1 = "DROP TABLE IF EXISTS user;"
+				+ "CREATE TABLE user (email VARCHAR(50) NOT NULL, password VARCHAR(25) NOT NULL);"
+				+ "INSERT INTO user (email, password) VALUES ('user1', 'password1');"
+				+ "INSERT INTO user (email, password) VALUES ('user2', 'password2');";
+		Statement stmt1 = conn.createStatement();
+		stmt1.executeUpdate(sql1);*/
 
-		String sql = "SELECT COUNT(*) AS count FROM users WHERE email=? AND password=?";
+		String sql = "SELECT COUNT(*) AS count FROM user WHERE email=? AND password=?";
 
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setString(1, email);
@@ -35,4 +43,5 @@ public class Account {
 			return true;
 		}
 	}
+	
 }
