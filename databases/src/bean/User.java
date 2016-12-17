@@ -1,13 +1,13 @@
 package bean;
 
 public class User {
-	private String email;
-	private String password;
-	private String message;
-	
+	private String email = "";
+	private String password = "";
+	private String message = "";
+
 	public User() {
 	}
-	
+
 	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
@@ -33,8 +33,32 @@ public class User {
 		return message;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public boolean validate() {
+
+		if (email == null) {
+			message = "Invalid email address";
+			return false;
+		}
+
+		if (password == null) {
+			message = "Invalid password";
+			return false;
+		}
+
+		if (!email.matches("\\w+@\\w+\\.\\w+")) {
+			message = "Invalid email address";
+			return false;
+		}
+
+		if (password.length() < 8) {
+			message = "Password must be at least 8 characters.";
+			return false;
+		} else if (password.matches("\\w*\\s+\\w*")) {
+			message = "Password cannot contain space.";
+			return false;
+		}
+
+		return true;
 	}
 
 }

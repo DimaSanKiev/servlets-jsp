@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.SQLException;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -38,6 +39,20 @@ public class Controller extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+		String action = request.getParameter("action");
+		
+		if (action == null) {
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
+		} else if (action.equals("login")) {
+			request.setAttribute("email", "");
+			request.setAttribute("password", "");
+			request.setAttribute("message", "");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+		} else {
+			out.println("Unrecognized action.");
+			return;
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -69,11 +84,16 @@ public class Controller extends HttpServlet {
 			request.setAttribute("password", "");
 
 			Account account = new Account(conn);
-			if (account.login(email, password)) {
-				request.getRequestDispatcher("/loginsuccess.jsp").forward(request, response);
-			} else {
-				request.setAttribute("message", "Email address or password not recognized.");
-				request.getRequestDispatcher("/login.jsp").forward(request, response);
+			try {
+				if (account.login(email, password)) {
+					request.getRequestDispatcher("/loginsuccess.jsp").forward(request, response);
+				} else {
+					request.setAttribute("message", "Email address or password not recognized.");
+					request.getRequestDispatcher("/login.jsp").forward(request, response);
+				}
+			} catch (SQLException e) {
+				// do something sensible here -- forward to error.jsp etc.
+				e.printStackTrace();
 			}
 
 		} else {
