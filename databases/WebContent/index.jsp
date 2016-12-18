@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<a href="/databases/Controller?action=login">Click to login</a>
+	<a href="/databases/Controller?action=login">Click to login</a>
+	<p />
+	<a href="/databases/Controller?action=createaccount">Create new account</a>
 
 </body>
 </html>
