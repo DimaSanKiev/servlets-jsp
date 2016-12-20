@@ -84,3 +84,4 @@ email/build/
 email/.classpath
 email/.project
 email/hello-world.iml
+email/email.properties
