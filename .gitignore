@@ -77,3 +77,10 @@ databases/build/
 databases/.classpath
 databases/.project
 databases/hello-world.iml
+
+email/.settings/
+email/.idea/
+email/build/
+email/.classpath
+email/.project
+email/hello-world.iml

@@ -66,6 +66,12 @@ table {
 			</form>
 		</div>
 	</center>
+	
+	<script>
+		var sys = 1;
+		<% /** this is comment */%>
+		<%-- console.log(sys); --%>
+	</script>
 
 </body>
 </html>
