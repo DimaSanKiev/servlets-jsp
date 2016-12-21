@@ -85,3 +85,10 @@ email/.classpath
 email/.project
 email/hello-world.iml
 email/email.properties
+
+jstl/.settings/
+jstl/.idea/
+jstl/build/
+jstl/.classpath
+jstl/.project
+jstl/hello-world.iml
