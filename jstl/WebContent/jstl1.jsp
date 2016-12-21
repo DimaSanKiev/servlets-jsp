@@ -10,10 +10,15 @@
 </head>
 <body>
 
-	<c:out value="Hello World JSTL" /> <p />
+	<%-- Output text --%>
+	<c:out value="Hello World JSTL" />
 
+	<%-- Access bean properties in JSTL --%>
 	<jsp:useBean id="test" class="bean.TestBean" scope="page" />
-	<c:out value="${test.info}" />
+	<p>Value of info "attribute": <c:out value="${test.info}" /></p>
+	
+	<%-- Getting parameters --%>
+	<p>Name parameter: <c:out value="${param.name}" /></p>
 
 </body>
 </html>
