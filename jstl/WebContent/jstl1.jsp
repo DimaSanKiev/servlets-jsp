@@ -22,6 +22,7 @@
 	<p>Name parameter: <c:out value="${param.name}" /></p>
 
 	<%-- JSTL if --%>
+	<%-- http://localhost:8080/jstl/jstl1.jsp?name=dima --%>
 	<p><c:if test="${param.name == 'dima'}">
 		Hello Dima.
 	</c:if></p>
@@ -30,6 +31,7 @@
 	</c:if></p>
 	
 	<%-- JSTL choose --%>
+	<%-- http://localhost:8080/jstl/jstl1.jsp?id=1&name=dima --%>
 	<p><c:choose>
 		<c:when test="${param.id == 1}">
 			ID is equal to 1
@@ -41,6 +43,17 @@
 			ID is neither 1 nor 2
 		</c:otherwise>
 	</c:choose></p>
+	
+	<%-- JSTL "for" loop --%>
+	<p><c:forEach var="i" begin="0" end="10" step="2" varStatus="status">
+		Loop counter is: <c:out value="${i}" /></br>
+		<c:if test="${status.first}">
+			This was a first iteration</br>
+		</c:if>
+		<c:if test="${status.last}">
+			This was a last iteration</br>
+		</c:if>
+	</c:forEach></p>
 	
 </body>
 </html>
