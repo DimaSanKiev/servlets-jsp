@@ -20,5 +20,13 @@
 	<%-- Getting parameters --%>
 	<p>Name parameter: <c:out value="${param.name}" /></p>
 
+	<%-- JSTL if --%>
+	<p><c:if test="${param.name == 'dima'}">
+		Hello Dima.
+	</c:if></p>
+	<p><c:if test="${param.name != 'dima'}">
+		Hello user.
+	</c:if></p>
+	
 </body>
 </html>
