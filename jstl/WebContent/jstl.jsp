@@ -46,12 +46,12 @@
 	
 	<%-- JSTL "for" loop --%>
 	<p><c:forEach var="i" begin="0" end="10" step="2" varStatus="status">
-		Loop counter is: <c:out value="${i}" /></br>
+		Loop counter is: <c:out value="${i}" /><br/>
 		<c:if test="${status.first}">
-			This was a first iteration</br>
+			This was a first iteration<br/>
 		</c:if>
 		<c:if test="${status.last}">
-			This was a last iteration</br>
+			This was a last iteration<br/>
 		</c:if>
 	</c:forEach></p>
 	
