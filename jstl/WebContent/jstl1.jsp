@@ -18,6 +18,7 @@
 	<p>Value of info "attribute": <c:out value="${test.info}" /></p>
 	
 	<%-- Getting parameters --%>
+	<%-- http://localhost:8080/jstl/jstl1.jsp?name=dima --%>
 	<p>Name parameter: <c:out value="${param.name}" /></p>
 
 	<%-- JSTL if --%>
@@ -27,6 +28,19 @@
 	<p><c:if test="${param.name != 'dima'}">
 		Hello user.
 	</c:if></p>
+	
+	<%-- JSTL choose --%>
+	<p><c:choose>
+		<c:when test="${param.id == 1}">
+			ID is equal to 1
+		</c:when>
+		<c:when test="${param.id == 2}">
+			ID is equal to 2
+		</c:when>
+		<c:otherwise>
+			ID is neither 1 nor 2
+		</c:otherwise>
+	</c:choose></p>
 	
 </body>
 </html>
