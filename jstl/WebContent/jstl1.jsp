@@ -10,7 +10,10 @@
 </head>
 <body>
 
-	<c:out value="Hello World JSTL" />
+	<c:out value="Hello World JSTL" /> <p />
+
+	<jsp:useBean id="test" class="bean.TestBean" scope="page" />
+	<c:out value="${test.info}" />
 
 </body>
 </html>
