@@ -12,6 +12,8 @@
 	<c:out value="${case1.name}" /><br/>
 	<c:out value="${case2.name}" /><br/>
 	<c:out value="${case3.name}" /><br/>
+	
+	<c:out value="${sessionScope.case2.name}"/><br/>
 
 </body>
 </html>
