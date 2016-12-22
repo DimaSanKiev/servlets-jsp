@@ -1,28 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/style/style.css" />
-<title>Picture Squirrel</title>
-</head>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<body>
+<c:import url="header.jsp" >
+	<c:param name="title" value="Picture Squirrel Home" />
+</c:import>
 
-<div class="headerWrapper">
-	<div class="header">
-		<img src="${pageContext.request.contextPath}/images/logo.png"/>
-		<span id="title"></span>
-	</div>
-</div>
+Content goes here
 
-<div class="content">
-	Content goes here
-</div>
-
-<div id="footer">
-	<p>Copyright &copy;</p>
-</div>
-
-</body>
-</html>
+<c:import url="footer.jsp" />
