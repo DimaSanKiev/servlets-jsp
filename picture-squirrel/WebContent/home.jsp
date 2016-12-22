@@ -10,7 +10,8 @@
 <sql:query dataSource="${ds}" sql="SELECT * FROM images LIMIT 10" var="results" />
 
 <c:forEach var="image" items="${results.rows}">
-	<p>${image.stem}.${image.image_extension}</p>
+	<c:set scope="page" var="imgname" value="${image.stem}.${image.image_extension}" />
+	<p><img src="${pageContext.request.contextPath}/pics/${imgname}" /></p>
 </c:forEach>
 
 <c:import url="footer.jsp" />
