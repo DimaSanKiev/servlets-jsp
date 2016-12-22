@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -34,6 +36,11 @@ public class PassObjects extends HttpServlet {
 		// Application scope
 		ServletContext context = getServletContext();
 		context.setAttribute("case3", case3);
+		
+		// Using Map in EL
+		Map<String, String> map = new HashMap<>();
+		map.put("fruit", "apple");
+		request.setAttribute("map1", map);
 		
 		request.getRequestDispatcher("/receiveObjects.jsp").forward(request, response);
 	}

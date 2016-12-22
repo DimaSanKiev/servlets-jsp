@@ -14,6 +14,8 @@
 	<c:out value="${case3.name}" /><br/>
 	
 	<c:out value="${sessionScope.case2.name}"/><br/>
+	
+	<c:out value="${map1['fruit']}"/><br/>
 
 </body>
 </html>
