@@ -1,7 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -42,7 +44,15 @@ public class PassObjects extends HttpServlet {
 		map.put("fruit", "apple");
 		request.setAttribute("map1", map);
 		
+		// <c:out> tag vs direct using of EL
 		request.setAttribute("link", "<a href='something.com'>Click here</a>");
+		
+		// forEach iterating through List
+		List<Case> list = new ArrayList<>();
+		list.add(new Case("test1", 1));
+		list.add(new Case("test2", 2));
+		list.add(new Case("test3", 3));
+		session.setAttribute("list1", list);
 		
 		request.getRequestDispatcher("/receiveObjects.jsp").forward(request, response);
 	}

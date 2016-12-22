@@ -20,5 +20,11 @@
 	<c:out value="${link}" /><br/>
 	${link}<br/>
 
+	<table style="border: 1px solid gray">
+		<c:forEach var="test" items="${list1}">
+			<tr><td>${test.id}</td><td>${test.name}</td><tr />
+		</c:forEach>
+	</table>
+
 </body>
 </html>
