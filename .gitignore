@@ -13,77 +13,66 @@ deployment/.idea/
 deployment/build/
 deployment/.classpath
 deployment/.project
-deployment/hello-world.iml
 
 scriptlets/.settings/
 scriptlets/.idea/
 scriptlets/build/
 scriptlets/.classpath
 scriptlets/.project
-scriptlets/hello-world.iml
 
 mvc/.settings/
 mvc/.idea/
 mvc/build/
 mvc/.classpath
 mvc/.project
-mvc/hello-world.iml
 
 forms/.settings/
 forms/.idea/
 forms/build/
 forms/.classpath
 forms/.project
-forms/hello-world.iml
 
 mvc-form/.settings/
 mvc-form/.idea/
 mvc-form/build/
 mvc-form/.classpath
 mvc-form/.project
-mvc-form/hello-world.iml
 
 session-tracking/.settings/
 session-tracking/.idea/
 session-tracking/build/
 session-tracking/.classpath
 session-tracking/.project
-session-tracking/hello-world.iml
 
 servlet-context/.settings/
 servlet-context/.idea/
 servlet-context/build/
 servlet-context/.classpath
 servlet-context/.project
-servlet-context/hello-world.iml
 
 scoped-objects/.settings/
 scoped-objects/.idea/
 scoped-objects/build/
 scoped-objects/.classpath
 scoped-objects/.project
-scoped-objects/hello-world.iml
 
 cookies/.settings/
 cookies/.idea/
 cookies/build/
 cookies/.classpath
 cookies/.project
-cookies/hello-world.iml
 
 databases/.settings/
 databases/.idea/
 databases/build/
 databases/.classpath
 databases/.project
-databases/hello-world.iml
 
 email/.settings/
 email/.idea/
 email/build/
 email/.classpath
 email/.project
-email/hello-world.iml
 email/email.properties
 
 jstl/.settings/
@@ -91,4 +80,9 @@ jstl/.idea/
 jstl/build/
 jstl/.classpath
 jstl/.project
-jstl/hello-world.iml
+
+picture-squirrel/.settings/
+picture-squirrel/.idea/
+picture-squirrel/build/
+picture-squirrel/.classpath
+picture-squirrel/.project
