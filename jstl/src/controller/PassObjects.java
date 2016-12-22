@@ -42,6 +42,8 @@ public class PassObjects extends HttpServlet {
 		map.put("fruit", "apple");
 		request.setAttribute("map1", map);
 		
+		request.setAttribute("link", "<a href='something.com'>Click here</a>");
+		
 		request.getRequestDispatcher("/receiveObjects.jsp").forward(request, response);
 	}
 
