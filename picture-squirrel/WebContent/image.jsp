@@ -2,10 +2,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="ps" %>
 
 <c:import url="header.jsp" >
 	<c:param name="title" value="Picture Squirrel - View Image" />
 </c:import>
+
+<center>
+
+<%-- Using a custom tag --%>
+<ps:image />
 
 <%-- If we need to update the image rating, we need to
 get the image data and updating the rating in a single transaction --%>
@@ -66,5 +72,7 @@ get the image data and updating the rating in a single transaction --%>
 		</td>
 	</tr>
 </table>
+
+</center>
 
 <c:import url="footer.jsp" />
