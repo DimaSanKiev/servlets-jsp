@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <c:import url="header.jsp" >
 	<c:param name="title" value="Picture Squirrel - View Image" />
@@ -9,6 +10,7 @@
 <%-- If we need to update the image rating, we need to
 get the image data and updating the rating in a single transaction --%>
 <sql:tansaction dataSource="jsbc/webshop">
+
 	<sql:query sql="SELECT * FROM images WHERE id=?" var="results">
 		<sql:param>${param.image}</sql:param>
 	</sql:query>
@@ -38,7 +40,7 @@ get the image data and updating the rating in a single transaction --%>
 
 <%-- Show the title with first letter capitalized --%>
 <h2><c:out value="${fn:toUpperCase(fn:substring(image.stem, 0, 1))}${fn:toLowerCase(fn:substring(image.stem, 1, -1))}" /></h2>
-<span class="rating">Rated: ${average_ranking}</span>
+<span class="rating">Rated: <fmt:formatNumber value="${average_ranking}" maxFractionDigits="1" /></span>
 
 <%-- Output the image and the rating form --%>
 <table style="border:none;">
