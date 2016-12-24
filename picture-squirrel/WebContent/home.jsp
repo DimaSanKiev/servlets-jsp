@@ -7,7 +7,7 @@
 
 <sql:setDataSource var="ds" dataSource="jsbc/webshop" />
 
-<sql:query dataSource="${ds}" sql="SELECT * FROM images LIMIT 10" var="results" />
+<sql:query dataSource="${ds}" sql="SELECT * FROM images ORDER BY id" var="results" />
 
 <table class="images">
 	<c:set var="tablewidth" value="8" />
