@@ -10,9 +10,6 @@
 
 <center>
 
-<%-- Using a custom tag --%>
-<ps:image />
-
 <%-- If we need to update the image rating, we need to
 get the image data and updating the rating in a single transaction --%>
 <sql:tansaction dataSource="jsbc/webshop">
@@ -23,7 +20,7 @@ get the image data and updating the rating in a single transaction --%>
 	
 	<%-- Get the row for this image and format the file name --%>
 	<c:set scope="page" var="image" value="${results.rows[0]}" />
-	<c:set scope="page" var="imgname" value="${image.stem}.${image.image_extension}" />
+	<%-- <c:set scope="page" var="imgname" value="${image.stem}.${image.image_extension}" /> --%>
 	<%-- Set the average ranking to a variable --%>
 	<c:set scope="page" var="average_ranking" value="${image.average_ranking}" />
 	
@@ -53,7 +50,9 @@ get the image data and updating the rating in a single transaction --%>
 	<tr>
 		<td><br style="margin-bottom: 1px;">
 		<span class="attribution">Image by <a class="attribution" target="_blank" href="${image.attribution_url}">${image.attribution_name}</a></span><br>
-		<img src="${pageContext.request.contextPath}/pics/${imgname}" /></td>
+		<%-- Using a custom tag --%>
+		<ps:image width="200" stem="${image.stem}" extension="${image.image_extension}"/>
+		<%-- <img src="${pageContext.request.contextPath}/pics/${imgname}" /> --%></td>
 	
 		<td>	
 		<form action='<c:url value="/gallery" />' method="post">
