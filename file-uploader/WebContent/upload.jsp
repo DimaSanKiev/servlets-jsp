@@ -9,7 +9,7 @@
 <body>
 
 	<form method="post"	action="${pageContext.request.contextPath}/uploader" enctype="multipart/form-data">
-		<input type="file" name="file" value="Select a file ..." />
+		<input type="file" name="file" value="Select an image..." />
 		<input type="submit" value="Upload Now" />
 	</form>
 
