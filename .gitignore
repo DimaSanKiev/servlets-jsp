@@ -86,3 +86,9 @@ picture-squirrel/.idea/
 picture-squirrel/build/
 picture-squirrel/.classpath
 picture-squirrel/.project
+
+file-uploader/.settings/
+file-uploader/.idea/
+file-uploader/build/
+file-uploader/.classpath
+file-uploader/.project
