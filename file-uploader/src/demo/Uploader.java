@@ -15,6 +15,7 @@ import org.apache.tomcat.util.http.fileupload.FileItemFactory;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
 
 public class Uploader extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,7 +38,7 @@ public class Uploader extends HttpServlet {
 		ServletFileUpload upload = new ServletFileUpload(itemFactory);
 		
 		try {
-			List<FileItem> items = upload.parseRequest(request);
+			List<FileItem> items = upload.parseRequest(new ServletRequestContext(request));
 			for (FileItem item : items) {
 				String contentType = item.getContentType();
 				
@@ -56,6 +57,8 @@ public class Uploader extends HttpServlet {
 		} catch (FileUploadException e) {
 			out.println("Upload failed.");
 			return;
+		} catch (Exception e) {
+			out.println("Could not upload file.");
 		}
 	}
 
