@@ -48,7 +48,7 @@ public class Uploader extends HttpServlet {
 				}
 				
 				File uploadDir = new File("E:\\Dima\\Information\\IT\\MyProjects\\Tutorials\\servlets-jsp\\uploads");
-				File file = File.createTempFile("img", ".png");
+				File file = File.createTempFile("img", ".png", uploadDir);
 				
 				item.write(file);
 				
