@@ -1,6 +1,7 @@
 .idea
 .gitattributes
 *.iml
+*.eml
 
 hello-world/.settings/
 hello-world/.idea/
@@ -93,3 +94,4 @@ file-uploader/.idea/
 file-uploader/build/
 file-uploader/.classpath
 file-uploader/.project
+file-uploader/classes/
