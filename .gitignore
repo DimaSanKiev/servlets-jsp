@@ -1,5 +1,6 @@
 .idea
 .gitattributes
+*.iml
 
 hello-world/.settings/
 hello-world/.idea/
